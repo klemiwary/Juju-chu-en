@@ -187,7 +187,7 @@ In Jujutsu, even when a conflict occurs the operation is not interrupted; the ch
 Jujutsu's conflict markers use a different format from Git's:
 
 ```
-<<<<<
+<<<<<<<
 %%%%%%%
 -removed line
 +added line

@@ -266,7 +266,7 @@ Resolve it with the following procedure.
 Format of the conflict markers:
 
 ```text
-<<<<<
+<<<<<<<
 %%%%%%%
 -removed line
 +added line
