@@ -1,0 +1,32 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[fix.tools.prettier]
+command = ["pnpm", "exec", "prettier", "--stdin-filepath", "$path"]
+patterns = ["glob:'**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx,html,css,json,jsonc,yaml,yml,md,mdx}'"]
+
+
+[aliases]
+lint = ["util", "exec", "--", "sh", "-c", """
+set -e
+
+files=$(jj diff -r 'reachable(@, mutable())' --name-only)
+js_files=$(echo "$files" | grep -E '\\.(js|mjs|cjs|ts|mts|cts|jsx|tsx)$' || true)
+
+echo "$js_files" | xargs -r pnpm exec eslint --fix
+"""]
+
+# case: Husky + lint-staged
+push = [
+    "util", "exec", "--",
+    "bash", "-c", 
+    "jj fix && jj lint && $JJ_WORKSPACE_ROOT/.husky/pre-push && jj git push \"$@\"", 
+    ""
+]
+
+# case: Lefthook
+push = [
+    "util", "exec", "--",
+    "bash", "-c", 
+    "jj fix && jj lint && lefthook run pre-push && jj git push \"$@\"", 
+    ""
+]

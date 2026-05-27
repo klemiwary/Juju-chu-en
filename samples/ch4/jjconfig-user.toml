@@ -1,0 +1,15 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[revsets]
+bookmark-advance-to = "heads(::@ & ~empty())"
+
+[ui]
+editor = "vim"
+merge-editor = "vscode"
+
+[merge-tools.weave]
+program = "weave-driver"
+merge-args = ["$base", "$left", "$right", "-o", "$output", "-l", "$marker_length", "-p", "$path"]
+merge-conflict-exit-codes = [1]
+merge-tool-edits-conflict-markers = true
+conflict-marker-style = "git"

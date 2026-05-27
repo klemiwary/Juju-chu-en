@@ -1,0 +1,15 @@
+[tasks.test]
+description = "Run Vitest tests"
+run = "pnpm exec vitest run"
+
+[tasks.knip]
+description = "Detect unused exports, dependencies and files"
+run = "pnpm exec knip"
+
+[tasks.audit]
+description = "Checks for known security issues with installed packages"
+run = "pnpm audit"
+
+[tasks.pre-push]
+description = "Run all pre-push checks in parallel"
+depends = ["test", "knip", "audit"]

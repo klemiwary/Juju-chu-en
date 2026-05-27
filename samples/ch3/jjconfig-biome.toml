@@ -1,0 +1,5 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[fix.tools.biome]
+command = [ "pnpm", "exec", "biome", "check", "--write" ,"--stdin-file-path", "$path" ]
+patterns = ["glob:'**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx,html,css,json,jsonc,yaml,yml,md,mdx}'"]

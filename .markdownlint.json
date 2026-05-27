@@ -1,0 +1,15 @@
+{
+  "default": true,
+  "commands-show-output": false,
+  "fenced-code-language": false,
+  "first-line-heading": false,
+  "heading-style": { "style": "atx" },
+  "heading-increment": false,
+  "line-length": false,
+  "link-fragments": false,
+  "no-alt-text": false,
+  "no-bare-urls": false,
+  "no-emphasis-as-heading": false,
+  "no-inline-html": false,
+  "table-column-style": false
+}
