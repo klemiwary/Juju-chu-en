@@ -125,9 +125,9 @@ jj op log --ignore-working-copy            # Show the operation log
 Adjust your actions according to the state of the current change (`@`). The decision procedure is as follows:
 
 1. Check the current change with `jj log --ignore-working-copy -r @`.
-2. If the description is empty and the diff is empty (an `empty` change) → set a description with `jj describe -m "<description>"` and begin work.
-3. Otherwise (work already in progress, or already finished) → create a new change with `jj new -m "<description>"`.
-4. Write the description in Conventional Commits format.
+2. **If the current change is empty** (it has NO description AND NO diff) → **reuse it**. Set its description with `jj describe -m "<description>"` and do your work in this change. **Do NOT create a new change in this case.** Note that a change created by `jj new` is itself empty, so it also falls under this rule.
+3. Otherwise (the current change already has a description or a diff) → create a new change with `jj new -m "<description>"`.
+4. Write the description in Conventional Commits format..
 
 ### 3. Checking for Conflicts After a Modifying Operation
 
@@ -254,6 +254,7 @@ jj log --ignore-working-copy -r 'conflict()'
    - "Should I include this change?" → It is always included.
    - "Should I merge into main?" → main, unless instructed otherwise.
    - "Should I squash?" → No.
+4. **The PR title follows Conventional Commits** — The PR title must follow the Conventional Commits format (e.g. `feat: ...`, `fix: ...`). Always pass it explicitly with `--title` rather than relying on the title auto-derived by `gh`.
 
 ### PR Creation Steps
 
@@ -276,7 +277,10 @@ jj bookmark track <bookmark-name>@origin
 jj push -b <bookmark-name>
 
 # 6. Create the PR with the GitHub CLI
-gh pr create --base main --head <bookmark-name>
+#    The PR title MUST follow Conventional Commits (e.g. "feat: ...", "fix: ...").
+#    Do not rely on the auto-derived title; pass it explicitly with --title,
+#    derived from the description of the lead change of the bookmark.
+gh pr create --base main --head <bookmark-name> --title "<type>: <summary>" --body "<body>"
 ```
 
 ---

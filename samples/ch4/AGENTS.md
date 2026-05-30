@@ -32,8 +32,8 @@ Think in Jujutsu's terms, not Git's.
 **Before you begin editing code, always perform the following steps:**
 
 1. Check the current change with `jj log --ignore-working-copy -r @`.
-2. If the description is empty and the diff is empty (an `empty` change) → set a description with `jj describe -m "<description>"` and begin work.
-3. Otherwise (work already in progress, or already finished) → create a new change with `jj new -m "<description>"`.
+2. **If the current change is empty** (it has NO description AND NO diff) → **reuse it**. Set its description with `jj describe -m "<description>"` and do your work in this change. **Do NOT create a new change in this case.** Note that a change created by `jj new` is itself empty, so it also falls under this rule. Setting a description with `jj describe` does NOT make the change non-empty; keep working in the same change.
+3. Otherwise (the current change already has a diff) → create a new change with `jj new -m "<description>"`.
 4. Write the description in Conventional Commits format.
 
 ### Basic Inspection Commands
@@ -62,7 +62,7 @@ No operation equivalent to `git add` is needed.
 
 - For syncing with remotes, use `jj git fetch` / `jj push -b <bookmark-name>`
 (Note: `jj push` is an alias command that internally runs `jj git push`)
-- To create a PR, use `gh pr create --base main --head <bookmark-name>`
+- To create a PR, use `gh pr create --base main --head <bookmark-name> --title "<type>: <summary>" --body "<body>"`. The PR title MUST follow Conventional Commits (e.g. `feat: ...`, `fix: ...`); always pass it explicitly with `--title` rather than relying on the title auto-derived by `gh`.
 - Unlike a branch, a bookmark does not move automatically; operate on it explicitly as needed
 
 ## Additional Notes

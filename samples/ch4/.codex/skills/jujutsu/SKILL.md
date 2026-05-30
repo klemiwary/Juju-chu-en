@@ -149,10 +149,9 @@ Look at the state of the current `@` and decide whether to use `describe` or `ne
 Procedure:
 
 1. Check the current change with `jj log --ignore-working-copy -r @`.
-2. If the description is empty and the diff is also empty, start working using that `@`.
-3. In that case, use `jj describe -m "<description>"`.
-4. If work is already in progress, or there is a description or diff, use `jj new -m "<description>"`.
-5. Write the description in Conventional Commits format.
+2. **If the current change is empty** (it has NO description AND NO diff) → **reuse it**. Set its description with `jj describe -m "<description>"` and work in this change. **Do NOT create a new change.** A change created by `jj new` is itself empty and falls under this rule. Note that running `jj describe` to set a description does NOT make the change non-empty — keep working in the same change.
+3. **Otherwise** (the current change already has a diff) → create a new change with `jj new -m "<description>"` and work there.
+4. Write the description in Conventional Commits format.
 
 Example:
 
@@ -323,9 +322,9 @@ jj push -b <bookmark-name>
 Examples:
 
 ```bash
-jj log -r 'trunk()..@'
-jj log -r 'conflict()'
-jj log -r 'mine() & mutable() & ~empty()'
+jj log --ignore-working-copy -r 'trunk()..@'
+jj log --ignore-working-copy -r 'conflict()'
+jj log --ignore-working-copy -r 'mine() & mutable() & ~empty()'
 ```
 
 ## PR Creation Workflow
@@ -333,6 +332,7 @@ jj log -r 'mine() & mutable() & ~empty()'
 ### Basic Rules
 
 - Unless instructed otherwise, the base for a PR is `main`
+- The PR title must follow Conventional Commits (e.g. `feat: ...`, `fix: ...`); always pass it explicitly with `--title` rather than relying on the title auto-derived by `gh`
 - Do not squash multiple changes
 - You do not need to confirm the following every time
 
@@ -348,7 +348,7 @@ jj log --ignore-working-copy
 jj bookmark list --all --ignore-working-copy
 jj bookmark track <bookmark-name>@origin
 jj push -b <bookmark-name>
-gh pr create --base main --head <bookmark-name>
+gh pr create --base main --head <bookmark-name> --title "<type>: <summary>" --body "<body>"
 ```
 
 Notes:
