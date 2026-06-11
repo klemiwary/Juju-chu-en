@@ -19,7 +19,7 @@ The meanings of terms differ between Jujutsu and Git. AI agents must rigorously 
 | HEAD                     | `@` (the working copy)                        |
 | stash                    | (no such concept; use `jj new` instead)       |
 | `git add`                | (unnecessary; automatic snapshot)             |
-| `git commit --amend`     | (unnecessary; changes to `@` are reflected automatically) |
+| `git commit --amend`     | (unnecessary; changes to `@` are applied automatically) |
 
 ### Fundamental Differences from Git
 
@@ -63,7 +63,7 @@ jj diff --git --ignore-working-copy -r @-
 jj bookmark list --ignore-working-copy
 
 # ❌ When you must NOT add it: checking state right after modifying files
-#    (because the latest snapshot needs to be reflected)
+#    (because the latest snapshot needs to be recorded)
 jj status          # do not add --ignore-working-copy right after a change
 jj diff --git      # do not add --ignore-working-copy right after a change
 
