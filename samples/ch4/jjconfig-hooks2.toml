@@ -12,7 +12,20 @@ set -e
 files=$(jj diff -r 'reachable(@, mutable())' --name-only)
 js_files=$(echo "$files" | grep -E '\\.(js|mjs|cjs|ts|mts|cts|jsx|tsx)$' || true)
 
-echo "$js_files" | xargs -r pnpm exec eslint --fix
+[ -z "$js_files" ] && exit 0
+
+status=0
+jj new
+echo "$js_files" | xargs -r pnpm exec eslint --fix || status=$?
+jj absorb
+
+if [ "$(jj log -r '@ & empty()' --count)" = "1" ]; then
+  jj edit @-
+else
+  jj desc -m 'style: apply eslint autofixes'
+fi
+
+exit "$status"
 """]
 
 # case: Husky + lint-staged

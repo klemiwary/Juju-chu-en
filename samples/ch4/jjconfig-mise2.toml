@@ -4,6 +4,7 @@
 command = ["pnpm", "exec", "prettier", "--stdin-filepath", "$path"]
 patterns = ["glob:'**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx,html,css,json,jsonc,yaml,yml,md,mdx}'"]
 
+
 [aliases]
 lint = ["util", "exec", "--", "sh", "-c", """
 set -e
@@ -26,3 +27,10 @@ fi
 
 exit "$status"
 """]
+
+push = [
+  "util", "exec", "--",
+  "bash", "-c",
+  "jj fix && jj lint && mise run pre-push && jj git push \"$@\"",
+  ""
+]

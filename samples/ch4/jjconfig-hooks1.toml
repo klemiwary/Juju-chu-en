@@ -1,0 +1,21 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[fix.tools.biome]
+command = [ "pnpm", "exec", "biome", "check", "--write" ,"--stdin-file-path", "$path" ]
+patterns = ["glob:'**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx,html,css,json,jsonc,yaml,yml,md,mdx}'"]
+
+# case: Husky + lint-staged
+push = [
+    "util", "exec", "--",
+    "bash", "-c", 
+    "jj fix && $JJ_WORKSPACE_ROOT/.husky/pre-push && jj git push \"$@\"", 
+    ""
+]
+
+# case: Lefthook
+push = [
+    "util", "exec", "--",
+    "bash", "-c", 
+    "jj fix && lefthook run pre-push && jj git push \"$@\"", 
+    ""
+]
