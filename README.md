@@ -21,6 +21,7 @@ By the end of the book, you will be ready to start using Jujutsu right away and 
 A free sample PDF is available for preview. Feel free to take a look before reading the full book.
 
 - [Free sample PDF](./jujuchu-sample.pdf)
+- [Free sample EPUB](./jujuchu-sample.epub)
 
 <br>
 
@@ -40,14 +41,6 @@ The digital edition is updated as needed. If you purchased the digital edition, 
 For errata and update information corresponding to the print edition, please check the printing information in the colophon of your copy and refer to the page below.
 
 - [Errata and updates](./errata.md)
-
-<br>
-
-## ■ Reading the Digital Edition
-
-The digital edition of this book is provided in three formats: **PDF**, **EPUB**, and **AZW3**.
-
-For recommended reading environments and tips, see [“How to Read the Digital Edition Comfortably”](./ebook-tips.md).
 
 <br>
 
