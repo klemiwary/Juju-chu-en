@@ -29,8 +29,8 @@ A free sample PDF is available for preview. Feel free to take a look before read
 
 The source code for the configuration examples shown in the book is available in the following directories:
 
-- Configuration examples from Chapter 3: [`./samples/ch3/`](./config/ch3/)
-- Configuration examples from Chapter 4: [`./samples/ch4/`](./config/ch4/)
+- Configuration examples from Chapter 3: [`./samples/ch3/`](./samples/ch3/)
+- Configuration examples from Chapter 4: [`./samples/ch4/`](./samples/ch4/)
 
 <br>
 
