@@ -4,11 +4,7 @@ This repository provides sample code, errata, and update information for _Juju-c
 
 <img src="./images/jujuchu-covers.png" alt="Cover image for Juju-chu!" />
 
-<br>
-
-## ■ About the Book
-
-### Overview
+## ■ Overview
 
 _Juju-chu! Start Your Jujutsu × AI Workflow with \`jj new\`_ is a full-scale beginner’s guide to **[Jujutsu](https://www.jj-vcs.dev/)**, the next-generation VCS that has been gaining rapid attention.
 
@@ -16,12 +12,27 @@ The book covers not only basic usage, but also how to build a mental model of Ju
 
 By the end of the book, you will be ready to start using Jujutsu right away and apply it to AI-assisted development.
 
-### Free Sample
+<br>
+
+## ■ Free Sample
 
 A free sample PDF is available for preview. Feel free to take a look before reading the full book.
 
 - [Free sample PDF](./jujuchu-sample.pdf)
 - [Free sample EPUB](./jujuchu-sample.epub)
+
+<br>
+
+## ■ Available At
+
+### Leanpub
+
+- [PDF/EPUB version](https://leanpub.com/juju-chu) (From $12)
+
+### Amazon
+
+- [Kindle version](https://www.amazon.com/dp/B0H82MZBJH) ($12)
+- [Paperback](https://www.amazon.com/dp/B0H82KN1BH) ($18.5)
 
 <br>
 
