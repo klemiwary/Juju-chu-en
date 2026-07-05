@@ -46,17 +46,17 @@ For errata and update information corresponding to the print edition, please che
 
 ## ■ Table of Contents
 
+#### Preface
+
+#### About This Book
+
+#### Prologue
+
 #### Chapter 1: What Kind of Tool Is Jujutsu?
 
 - 1-1. Is Git a poor fit for agentic development?
-  - Git’s redundant three-state model
-  - The high cost of context switching
-  - Rewriting history is complex and dangerous
-  - Commands with heavy side effects that are hard to undo
 - 1-2. Why Jujutsu is gaining attention in the AI era
-  - The working directory is committed immediately
-  - Every operation can be undone
-  - Conflicts are treated as ordinary state
+- Column: How Git Revolutionized Version Control
 
 #### Chapter 2: Let’s Try Jujutsu
 
@@ -75,6 +75,7 @@ For errata and update information corresponding to the print edition, please che
   - 2-4-2. The difference between branches and bookmarks
   - 2-4-3. Working on anonymous branches
 - 2-5. Commonly used `jj` commands
+- Column: Jujutsu’s Roots—What Kind of VCS Is Mercurial?
 
 #### Chapter 3: Practical Jujutsu × AI Workflows
 
@@ -86,6 +87,7 @@ For errata and update information corresponding to the print edition, please che
   - 3-2-1. Adjusting the granularity of AI-generated changes
   - 3-2-2. Pushing changes and creating a PR
   - 3-2-3. Parallel development with workspaces
+- Column: The Tools That Shaped Jujutsu, Part 1
 
 #### Chapter 4: Advanced Jujutsu Techniques
 
@@ -97,9 +99,13 @@ For errata and update information corresponding to the print edition, please che
   - 4-2-2. `jj arrange`
   - 4-2-3. `jj bookmark advance`
 - 4-3. Alternatives to Git hooks
-- 4-4. Jujutsu UI tools
-  - 4-4-1. jjui
-  - 4-4-2. JJ View
+- 4-4. Resolving Conflicts Semi-Automatically
+  - 4-4-1. Mergiraf
+  - 4-4-2. Weave
+- 4-5. Jujutsu UI tools
+  - 4-5-1. jjui
+  - 4-5-2. JJ View
+- Column: The Tools That Shaped Jujutsu, Part 2
 
 #### Chapter 5: Jujutsu Problem-Solving Guide
 
@@ -127,6 +133,9 @@ For errata and update information corresponding to the print edition, please che
   - After merging a PR and fetching, `@` gets lost
   - A remote bookmark still in progress was deleted on GitHub
   - Claude Code still asks for permission even though `jj log` is allowed in Permissions
+- Column: We Want a JJ-Native Hosting Service!
+
+#### Epilogue
 
 ---
 
