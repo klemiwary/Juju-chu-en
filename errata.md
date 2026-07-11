@@ -1,4 +1,4 @@
-# Errata & Updates for *Juju-chu!—Starting Your Jujutsu × AI Workflow with `jj new`*
+# Errata & Updates for _Juju-chu!—Starting Your Jujutsu × AI Workflow with `jj new`_
 
 Last updated: June 21, 2026
 
@@ -12,5 +12,9 @@ Last updated: June 21, 2026
 
 ### Corrections
 
-There are currently no corrections to report.
+- Column in chapter 2 / p.64
 
+```diff
+- Column: Jujuts's Roots—What Kind of VCS Is Mercurial?
++ Column: Jujutsu's Roots—What Kind of VCS Is Mercurial?
+```
