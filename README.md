@@ -4,6 +4,8 @@ This repository provides sample code, errata, and update information for _Juju-c
 
 <img src="./images/jujuchu-covers.png" alt="Cover image for Juju-chu!" />
 
+<br>
+
 ## ■ Overview
 
 _Juju-chu! Start Your Jujutsu × AI Workflow with \`jj new\`_ is a full-scale beginner’s guide to **[Jujutsu](https://www.jj-vcs.dev/)**, the next-generation VCS that has been gaining rapid attention.
@@ -63,87 +65,89 @@ For errata and update information corresponding to the print edition, please che
 
 #### Prologue
 
-#### Chapter 1: What Kind of Tool Is Jujutsu?
+#### Chapter 1. What Kind of Tool Is Jujutsu?
 
-- 1-1. Is Git a poor fit for agentic development?
-- 1-2. Why Jujutsu is gaining attention in the AI era
+- 1-1. Is Git a Poor Fit for Agentic Coding?
+- 1-2. The Jujutsu Features That Stand Out in the AI Era
 - Column: How Git Revolutionized Version Control
 
-#### Chapter 2: Let’s Try Jujutsu
+#### Chapter 2. Let’s Try Jujutsu
 
-- 2-1. Setting up Jujutsu
-- 2-2. A hands-on tour of Jujutsu
-  - 2-2-1. Initializing a repository
-  - 2-2-2. Checking the repository’s state
-  - 2-2-3. Working with changes
-  - 2-2-4. Working with remotes
-- 2-3. Jujutsu’s three logs
-  - 2-3-1. Revision Log (`jj log`)
-  - 2-3-2. Evolution Log (`jj evolog`)
-  - 2-3-3. Operation Log (`jj op log`)
-- 2-4. Jujutsu’s mental model
-  - 2-4-1. What is a change?
-  - 2-4-2. The difference between branches and bookmarks
-  - 2-4-3. Working on anonymous branches
-- 2-5. Commonly used `jj` commands
-- Column: Jujutsu’s Roots—What Kind of VCS Is Mercurial?
+- 2-1. Setting Up Jujutsu
+  - 2-1-1. Installing Jujutsu
+  - 2-1-2. Initial Configuration
+- 2-2. A Hands-On Tour of Jujutsu
+  - 2-2-1. Initializing a Repository
+  - 2-2-2. Checking the Repository’s State
+  - 2-2-3. Working with Changes
+  - 2-2-4. Interacting with a Remote
+- 2-3. The Three Types of Logs in Jujutsu
+  - 2-3-1. The Revision Log (`jj log`)
+  - 2-3-2. The Evolution Log (`jj evolog`)
+  - 2-3-3. The Operation Log (`jj operation log`)
+- 2-4. The Jujutsu Mental Model
+  - 2-4-1. What Is a Change?
+  - 2-4-2. The Difference Between Branches and Bookmarks
+  - 2-4-3. Working on Anonymous Branches
+- 2-5. Commonly Used `jj` Commands
+- Column: Jujuts’s Roots—What Kind of VCS Is Mercurial?
 
-#### Chapter 3: Practical Jujutsu × AI Workflows
+#### Chapter 3. Jujutsu × AI Workflow in Practice
 
-- 3-1. Coordinating AI agents with Jujutsu
-  - 3-1-1. Getting AI agents to use Jujutsu
-  - 3-1-2. Permissions settings for `jj` commands
-  - 3-1-3. Running `jj fix` with hooks
-- 3-2. A practical development process with Jujutsu and AI
-  - 3-2-1. Adjusting the granularity of AI-generated changes
-  - 3-2-2. Pushing changes and creating a PR
-  - 3-2-3. Parallel development with workspaces
+- 3-1. Coordinating AI Agents with Jujutsu
+  - 3-1-1. Getting AI Agents to Use Jujutsu
+  - 3-1-2. Permissions Settings for `jj` Commands
+  - 3-1-3. Running `jj fix` via Hooks
+- 3-2. A Walkthrough of the Jujutsu × AI Development Process
+  - 3-2-1. Adjusting the Granularity of AI-Created Changes
+  - 3-2-2. Pushing and Creating a PR
+  - 3-2-3. Parallel Development with Workspaces
 - Column: The Tools That Shaped Jujutsu, Part 1
 
-#### Chapter 4: Advanced Jujutsu Techniques
+#### Chapter 4. Advanced Jujutsu Techniques
 
-- 4-1. Smarter ways to specify targets
-  - 4-1-1. Using revsets to specify revisions smartly
-  - 4-1-2. Using filesets to specify files smartly
-- 4-2. Handy advanced commands
+- 4-1. Clever Ways to Specify Your Targets
+  - 4-1-1. Specifying Revisions Smartly with Revsets
+  - 4-1-2. Specifying Files Smartly with Filesets
+- 4-2. Handy Power-User Commands Worth Knowing
   - 4-2-1. `jj absorb`
   - 4-2-2. `jj arrange`
   - 4-2-3. `jj bookmark advance`
-- 4-3. Alternatives to Git hooks
+- 4-3. Alternative Tactics for Git Hooks
 - 4-4. Resolving Conflicts Semi-Automatically
   - 4-4-1. Mergiraf
   - 4-4-2. Weave
-- 4-5. Jujutsu UI tools
+- 4-5. UI Tools for Jujutsu
   - 4-5-1. jjui
   - 4-5-2. JJ View
 - Column: The Tools That Shaped Jujutsu, Part 2
 
-#### Chapter 5: Jujutsu Problem-Solving Guide
+#### Chapter 5. The Jujutsu Problem-Solving Guide
 
 - 5-1. FAQ
-  - 5-1-1. Comparing Jujutsu with Git
-    - What can Git do that Jujutsu cannot?
-    - Why is there no `merge` command?
-    - Why is there no `pull` command?
-    - How do I do the equivalent of Git’s cherry-pick?
-  - 5-1-2. Niche operations and settings
-    - Can I view the contents of a file at a specific point without moving `@`?
-    - Can I split a change chronologically?
-    - How do I keep temporary logs, dumps, and other files out of history?
-    - Can I store repository-specific Jujutsu settings in the repository itself?
-    - How do I rename a tracked bookmark?
-  - 5-1-3. Jujutsu trivia
-    - Is Jujutsu just a wrapper around Git?
-    - What kind of person created Jujutsu?
-    - Does the product name mean “cursed technique” or “jujutsu” as a martial art?
+  - 5-1-1. Comparing with Git
+    - What Can Git Do That Jujutsu Can’t?
+    - Is There No `merge` Command?
+    - Is There No `pull` Command?
+    - I Want to Do the Equivalent of Git’s cherry-pick
+  - 5-1-2. Niche Operations and Settings
+    - Can I Check a File’s Contents at a Given Point Without Moving `@`?
+    - I Want to Split a Change Chronologically
+    - I Don’t Want Temporary Logs or Dumps in My History
+    - I Want to Store a Repository’s Jujutsu Config in the Repository Itself
+    - I Want to Rename a Tracked Bookmark
+  - 5-1-3. Jujutsu Trivia
+    - Is Jujutsu a Wrapper Around Git?
+    - What Kind of Person Created Jujutsu?
+    - What Does the Name Jujutsu Mean—and How Do You Pronounce It?
 - 5-2. Troubleshooting
-  - An ordinary push unexpectedly turns into a force push
-  - The mysterious “Error: The working copy is stale” message appears
-  - A change suddenly has a `divergent` annotation
-  - Jujutsu is not tracking image or video files
-  - After merging a PR and fetching, `@` gets lost
-  - A remote bookmark still in progress was deleted on GitHub
-  - Claude Code still asks for permission even though `jj log` is allowed in Permissions
+  - A Plain Push Silently Becomes a Force Push
+  - A Cryptic “Error: The working copy is stale” Appears
+  - A Change Somehow Picked Up a “divergent” Annotation
+  - Jujutsu Won’t Track My Image or Video Files
+  - After Merging a PR and Fetching, `@` Goes Astray
+  - I Deleted a Remote Bookmark I Was Still Working On from GitHub
+  - Claude Code Asks for Permission to Run jj log Even Though It’s Set to allow
 - Column: We Want a JJ-Native Hosting Service!
 
 #### Epilogue
