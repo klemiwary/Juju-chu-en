@@ -2,7 +2,7 @@
 
 This repository uses Jujutsu (`jj`) for version control.
 Always work using Jujutsu's concepts and commands rather than Git's.
-For detailed procedures, see `.codex/skills/jujutsu/SKILL.md`.
+For detailed procedures, see `.agents/skills/jujutsu/SKILL.md`.
 
 ### Critical Rules
 
