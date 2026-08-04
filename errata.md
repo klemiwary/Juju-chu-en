@@ -1,6 +1,6 @@
 # Errata & Updates for _Juju-chu!—Starting Your Jujutsu × AI Workflow with `jj new`_
 
-Last updated: June 21, 2026
+Last updated: August 4, 2026
 
 ### Please Note
 
@@ -17,4 +17,15 @@ Last updated: June 21, 2026
 ```diff
 - Column: Jujuts's Roots—What Kind of VCS Is Mercurial?
 + Column: Jujutsu's Roots—What Kind of VCS Is Mercurial?
+```
+
+- 3-2-1. Running `jj fix` via Hooks / p.79 / code block
+
+```diff
+  [fix.tools.biome]
+  command = [ "pnpm", "exec", "biome", "check", "--write" ,"--stdin-file-path",
+  "$path" ]
+  patterns = ["glob:'**/*.
+- {js,mjs,cjs,ts,mts,cts,jsx,tsx,html,css,json,jsonc,yaml,yml,md,mdx}'"]
++ {js,mjs,cjs,ts,mts,cts,jsx,tsx,html,css,json,jsonc}'"]
 ```
