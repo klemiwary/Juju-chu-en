@@ -30,7 +30,6 @@
     ],
     "deny": [
       "Bash(git:*)",
-      "Bash(jj split:*)",
       "Bash(jj resolve:*)",
       "Bash(jj diffedit:*)",
       "Bash(jj arrange:*)"
