@@ -1,4 +1,4 @@
-# _Juju-chu! Start Your Jujutsu × AI Workflow with \`jj new\`_ Support Page
+# _Juju-chu! — Start Your Jujutsu × AI Workflow with \`jj new\`_ Support Page
 
 This repository provides sample code, errata, and update information for _Juju-chu! Start Your Jujutsu × AI Workflow with \`jj new\`_.
 
@@ -8,7 +8,7 @@ This repository provides sample code, errata, and update information for _Juju-c
 
 ## ■ Overview
 
-_Juju-chu! Start Your Jujutsu × AI Workflow with \`jj new\`_ is a full-scale beginner’s guide to **[Jujutsu](https://www.jj-vcs.dev/)**, the next-generation VCS that has been gaining rapid attention.
+_Juju-chu! — Start Your Jujutsu × AI Workflow with \`jj new\`_ is a full-scale beginner’s guide to **[Jujutsu](https://www.jj-vcs.dev/)**, the next-generation VCS that has been gaining rapid attention.
 
 The book covers not only basic usage, but also how to build a mental model of Jujutsu by comparing it with Git, practical tips for working with AI coding agents, and solutions to common problems you are likely to encounter when using Jujutsu in real projects.
 
@@ -127,8 +127,8 @@ For errata and update information corresponding to the print edition, please che
 - 5-1. FAQ
   - 5-1-1. Comparing with Git
     - What Can Git Do That Jujutsu Can’t?
-    - Is There No `merge` Command?
-    - Is There No `pull` Command?
+    - Is There No merge Command?
+    - Is There No pull Command?
     - I Want to Do the Equivalent of Git’s cherry-pick
   - 5-1-2. Niche Operations and Settings
     - Can I Check a File’s Contents at a Given Point Without Moving `@`?
