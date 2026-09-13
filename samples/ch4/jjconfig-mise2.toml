@@ -1,7 +1,7 @@
 #:schema https://docs.jj-vcs.dev/latest/config-schema.json
 
 [fix.tools.prettier]
-command = ["pnpm", "exec", "prettier", "--stdin-filepath", "$path"]
+command = ["env", "pnpm_config_use_stderr=true", "pnpm", "exec", "prettier", "--stdin-filepath", "$path"]
 patterns = ["glob:'**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx,html,css,json,jsonc}'"]
 
 
