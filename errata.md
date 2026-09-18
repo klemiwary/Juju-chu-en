@@ -1,6 +1,6 @@
 # Errata & Updates for _Juju-chu!—Starting Your Jujutsu × AI Workflow with `jj new`_
 
-Last updated: August 4, 2026
+Last updated: September 18, 2026
 
 ### Please Note
 
@@ -28,4 +28,15 @@ Last updated: August 4, 2026
   patterns = ["glob:'**/*.
 - {js,mjs,cjs,ts,mts,cts,jsx,tsx,html,css,json,jsonc,yaml,yml,md,mdx}'"]
 + {js,mjs,cjs,ts,mts,cts,jsx,tsx,html,css,json,jsonc}'"]
+```
+
+```diff
+  [aliases]
+  set -e
+  lint = ["util", "exec", "--", "sh", "-c", """
+- files=$(jj diff -r 'reachable(@, mutable())' --name-only)
++ files=$(jj diff -r 'reachable(@, mutable())' --name-only |
++     while IFS= read -r f; do if [ -f "$f" ]; then printf '%s\\n' "$f"; fi; done)
+  js_files=$(echo "$files" | grep -E '\\.(js|mjs|cjs|ts|mts|cts|jsx|
+  tsx)$' // true)
 ```

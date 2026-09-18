@@ -9,7 +9,8 @@ patterns = ["glob:'**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx,html,css,json,jsonc}'"]
 lint = ["util", "exec", "--", "sh", "-c", """
 set -e
 
-files=$(jj diff -r 'reachable(@, mutable())' --name-only)
+files=$(jj diff -r 'reachable(@, mutable())' --name-only |
+    while IFS= read -r f; do if [ -f "$f" ]; then printf '%s\\n' "$f"; fi; done)
 js_files=$(echo "$files" | grep -E '\\.(js|mjs|cjs|ts|mts|cts|jsx|tsx)$' || true)
 
 [ -z "$js_files" ] && exit 0
