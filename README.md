@@ -147,7 +147,6 @@ For errata and update information corresponding to the print edition, please che
   - Jujutsu Won’t Track My Image or Video Files
   - After Merging a PR and Fetching, `@` Goes Astray
   - I Deleted a Remote Bookmark I Was Still Working On from GitHub
-  - Claude Code Asks for Permission to Run jj log Even Though It’s Set to allow
 - Column: We Want a JJ-Native Hosting Service!
 
 #### Epilogue
