@@ -130,6 +130,7 @@ For errata and update information corresponding to the print edition, please che
     - Is There No merge Command?
     - Is There No pull Command?
     - I Want to Do the Equivalent of Git’s cherry-pick
+    - Can I Use Jujutsu with ADEs like Orca or Herdr?
   - 5-1-2. Niche Operations and Settings
     - Can I Check a File’s Contents at a Given Point Without Moving `@`?
     - I Want to Split a Change Chronologically
